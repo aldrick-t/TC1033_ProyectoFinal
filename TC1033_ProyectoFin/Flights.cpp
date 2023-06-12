@@ -3,15 +3,15 @@
 using namespace std;
 
 Flights::Flights() {
-	flightID = " ";
-	status = " ";
+	flightID = "000";
+	status = "ground";
 	origin = " ";
 	destination = " ";
 	departureTime = " ";
 	arrivalTime = " ";
-	availability = " ";
+	availability = 0;
 };
-Flights::Flights(string flightID, string status, string origin, string destination, string departureTime, string arrivalTime, string availability) {
+Flights::Flights(string flightID, string status, string origin, string destination, string departureTime, string arrivalTime, int availability) {
 	this->flightID = flightID;
 	this->status = status;
 	this->origin = origin;
@@ -27,7 +27,7 @@ void Flights::setOrigin(string origin) { this->origin = origin; }
 void Flights::setDestination(string destination) { this->destination = destination; }
 void Flights::setDepartureTime(string departureTime) { this->departureTime = departureTime; }
 void Flights::setArrivalTime(string arrivalTime) { this->arrivalTime = arrivalTime; }
-void Flights::setAvailability(string availability) { this->availability = availability; }
+void Flights::setAvailability(int availability) { this->availability = availability; }
 
 //define getters
 string Flights::getFlightID() { return flightID; }
@@ -36,4 +36,16 @@ string Flights::getOrigin() { return origin; }
 string Flights::getDestination() { return destination; }
 string Flights::getDepartureTime() { return departureTime; }
 string Flights::getArrivalTime() { return arrivalTime; }
-string Flights::getAvailability() { return availability; }
+int Flights::getAvailability() { return availability; }
+
+//define print function
+void Flights::displayFlight() {
+	cout << "Flight ID\t " << flightID << endl;
+	cout << "Status:\t\t " << status << endl;
+	cout << "Origin:\t\t " << origin << endl;
+	cout << "Destination:\t " << destination << endl;
+	cout << "Departure Time:\t " << departureTime << endl;
+	cout << "Arrival Time:\t " << arrivalTime << endl;
+	cout << "Availability:\t " << availability << endl;
+	cout << endl;
+}

@@ -10,10 +10,10 @@ private:
 	string destination;
 	string departureTime;
 	string arrivalTime;
-	string availability;
+	int availability;
 public:
 	Flights();//revise
-	Flights(string, string, string, string, string, string, string);
+	Flights(string, string, string, string, string, string, int);
 
 	void setFlightID(string);
 	void setStatus(string);
@@ -21,7 +21,7 @@ public:
 	void setDestination(string);
 	void setDepartureTime(string);
 	void setArrivalTime(string);
-	void setAvailability(string);
+	void setAvailability(int);
 
 	string getFlightID();
 	string getStatus();
@@ -29,5 +29,7 @@ public:
 	string getDestination();
 	string getDepartureTime();
 	string getArrivalTime();
-	string getAvailability();
+	int getAvailability();
+
+	void displayFlight();
 };

@@ -22,4 +22,6 @@ public:
 	int getAge();
 	string getStatus();
 	string getSeat();
+
+	void displayPassenger();
 };
